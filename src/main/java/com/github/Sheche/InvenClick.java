@@ -29,7 +29,58 @@ public class InvenClick implements Listener {
                 if (item.getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "F#")) {
                     noteBlock.setNote(Note.sharp(0, Note.Tone.F));
                     player.getTargetBlock(null, 4).setBlockData(noteBlock);
-                    player.playSound(location, Sound.BLOCK_NOTE_BLOCK_HARP, 100, 0.5f);
+                    String instrument = noteBlock.getInstrument().toString();
+
+                    switch (instrument) {
+                        case "BASS_GUITAR":
+                            player.playSound(location, Sound.BLOCK_NOTE_BLOCK_BASS, 100, 0.5f);
+                            break;
+                        case "SNARE_DRUM":
+                            player.playSound(location, Sound.BLOCK_NOTE_BLOCK_SNARE, 100, 0.5f);
+                            break;
+                        case "STICKS":
+                            player.playSound(location, Sound.BLOCK_NOTE_BLOCK_HAT, 100, 0.5f);
+                            break;
+                        case "BASS_DRUM":
+                            player.playSound(location, Sound.BLOCK_NOTE_BLOCK_BASEDRUM, 100, 0.5f);
+                            break;
+                        case "BELL":
+                            player.playSound(location, Sound.BLOCK_NOTE_BLOCK_BELL, 100, 0.5f);
+                            break;
+                        case "FLUTE":
+                            player.playSound(location, Sound.BLOCK_NOTE_BLOCK_FLUTE, 100, 0.5f);
+                            break;
+                        case "CHIME":
+                            player.playSound(location, Sound.BLOCK_NOTE_BLOCK_CHIME, 100, 0.5f);
+                            break;
+                        case "GUITAR":
+                            player.playSound(location, Sound.BLOCK_NOTE_BLOCK_GUITAR, 100, 0.5f);
+                            break;
+                        case "XYLOPHONE":
+                            player.playSound(location, Sound.BLOCK_NOTE_BLOCK_XYLOPHONE, 100, 0.5f);
+                            break;
+                        case "IRON_XYLOPHONE":
+                            player.playSound(location, Sound.BLOCK_NOTE_BLOCK_IRON_XYLOPHONE, 100, 0.5f);
+                            break;
+                        case "COW_BELL":
+                            player.playSound(location, Sound.BLOCK_NOTE_BLOCK_COW_BELL, 100, 0.5f);
+                            break;
+                        case "DIDGERIDOO":
+                            player.playSound(location, Sound.BLOCK_NOTE_BLOCK_DIDGERIDOO, 100, 0.5f);
+                            break;
+                        case "BIT":
+                            player.playSound(location, Sound.BLOCK_NOTE_BLOCK_BIT, 100, 0.5f);
+                            break;
+                        case "BANJO":
+                            player.playSound(location, Sound.BLOCK_NOTE_BLOCK_BANJO, 100, 0.5f);
+                            break;
+                        case "PLING":
+                            player.playSound(location, Sound.BLOCK_NOTE_BLOCK_PLING, 100, 0.5f);
+                            break;
+                        default:
+                            player.playSound(location, Sound.BLOCK_NOTE_BLOCK_HARP, 100, 0.5f);
+                            break;
+                    }
                 }
 
                 else if (item.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "G")) {
