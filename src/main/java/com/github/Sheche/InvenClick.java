@@ -31,7 +31,7 @@ public class InvenClick implements Listener {
                 if (item.getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "F#")) {
                     noteBlock.setNote(Note.sharp(0, Note.Tone.F));
                     player.getTargetBlock(null, 4).setBlockData(noteBlock);
-                    
+
                     switch (instrument) {
                         case "BASS_GUITAR":
                             player.playSound(location, Sound.BLOCK_NOTE_BLOCK_BASS, 100, 0.5f);
