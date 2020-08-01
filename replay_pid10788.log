@@ -1,0 +1,88 @@
+JvmtiExport can_access_local_variables 0
+JvmtiExport can_hotswap_or_post_breakpoint 0
+JvmtiExport can_post_on_exceptions 0
+# 248 ciObject found
+ciMethod java/lang/Object <init> ()V 4097 1 1217397 0 0
+ciMethod java/lang/Object getClass ()Ljava/lang/Class; 2049 1 256 0 -1
+ciMethod java/lang/Object clone ()Ljava/lang/Object; 2049 1 256 0 -1
+ciMethod java/lang/Class isInstance (Ljava/lang/Object;)Z 2049 1 256 0 -1
+ciMethod java/lang/Class isArray ()Z 2049 1 256 0 -1
+ciMethod java/lang/Class getName ()Ljava/lang/String; 2257 1 56168 0 -1
+ciMethod java/lang/Class getClassLoader ()Ljava/lang/ClassLoader; 3113 1 16284 0 -1
+ciMethod java/lang/System getSecurityManager ()Ljava/lang/SecurityManager; 2049 1 57180 0 0
+ciMethod java/lang/System arraycopy (Ljava/lang/Object;ILjava/lang/Object;II)V 7169 1 896 0 -1
+ciMethod sun/misc/Unsafe getInt (Ljava/lang/Object;J)I 2049 1 256 0 -1
+ciMethod sun/misc/Unsafe getObject (Ljava/lang/Object;J)Ljava/lang/Object; 3073 1 384 0 -1
+ciMethod sun/misc/Unsafe getBoolean (Ljava/lang/Object;J)Z 9 1 1 0 -1
+ciMethod sun/misc/Unsafe getByte (Ljava/lang/Object;J)B 0 0 1 0 -1
+ciMethod sun/misc/Unsafe getShort (Ljava/lang/Object;J)S 0 0 1 0 -1
+ciMethod sun/misc/Unsafe getChar (Ljava/lang/Object;J)C 0 0 1 0 -1
+ciMethod sun/misc/Unsafe getLong (Ljava/lang/Object;J)J 49 1 6 0 -1
+ciMethod sun/misc/Unsafe getFloat (Ljava/lang/Object;J)F 0 0 1 0 -1
+ciMethod sun/misc/Unsafe getDouble (Ljava/lang/Object;J)D 0 0 1 0 -1
+ciMethod java/lang/Float floatToIntBits (F)I 1 1 659 0 -1
+ciMethod java/lang/Double doubleToLongBits (D)J 0 0 1 0 -1
+ciMethod java/io/ObjectStreamField isUnshared ()Z 1025 1 128 0 0
+ciMethod sun/reflect/Reflection getCallerClass ()Ljava/lang/Class; 3073 1 384 0 -1
+ciMethod java/lang/Math min (II)I 3713 1 125317 0 -1
+ciMethodData java/lang/Object <init> ()V 2 1217397 orig 264 168 227 48 108 0 0 0 0 128 4 252 19 0 0 0 0 32 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 77 68 79 32 101 120 116 114 97 32 100 97 116 97 32 108 111 99 107 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 169 139 148 0 1 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 3 0 1 0 0 0 0 0 0 0 255 255 255 255 0 0 0 0 0 0 0 0 data 0 oops 0
+ciMethod java/io/OutputStream write ([BII)V 81 3401 10 0 -1
+ciMethod sun/reflect/misc/ReflectUtil checkPackageAccess (Ljava/lang/Class;)V 4097 1 15197 0 -1
+ciMethod sun/reflect/misc/ReflectUtil needsPackageAccessCheck (Ljava/lang/ClassLoader;Ljava/lang/ClassLoader;)Z 0 0 1 0 -1
+ciMethodData java/lang/System getSecurityManager ()Ljava/lang/SecurityManager; 2 57180 orig 264 168 227 48 108 0 0 0 0 48 148 253 19 0 0 0 0 24 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 77 68 79 32 101 120 116 114 97 32 100 97 116 97 32 108 111 99 107 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 225 242 6 0 1 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 3 0 1 0 0 0 0 0 0 0 255 255 255 255 0 0 0 0 0 0 0 0 data 0 oops 0
+ciMethod java/util/LinkedList add (Ljava/lang/Object;)Z 2257 1 5928 0 -1
+ciMethod org/gradle/internal/serialize/Encoder writeBytes ([BII)V 0 0 1 0 -1
+ciMethod org/gradle/internal/serialize/AbstractEncoder$EncoderStream write ([BII)V 2049 1 5392 0 960
+ciMethod org/gradle/internal/serialize/kryo/KryoBackedEncoder writeBytes ([BII)V 2049 1 5376 0 896
+ciMethod com/esotericsoftware/kryo/io/Output require (I)Z 2433 1 5900 0 608
+ciMethod com/esotericsoftware/kryo/io/Output flush ()V 305 1 1228 0 -1
+ciMethod com/esotericsoftware/kryo/io/Output writeBytes ([BII)V 2041 97 5393 0 768
+ciMethod java/io/Bits putBoolean ([BIZ)V 9 1 144 0 0
+ciMethod java/io/Bits putChar ([BIC)V 0 0 1 0 0
+ciMethod java/io/Bits putShort ([BIS)V 2049 1 5380 0 0
+ciMethod java/io/Bits putInt ([BII)V 3369 1 1445 0 192
+ciMethod java/io/Bits putFloat ([BIF)V 17 1 515 0 0
+ciMethod java/io/Bits putLong ([BIJ)V 217 1 1057 0 288
+ciMethod java/io/Bits putDouble ([BID)V 0 0 1 0 0
+ciMethod java/io/ObjectStreamClass forClass ()Ljava/lang/Class; 3081 1 5519 0 128
+ciMethod java/io/ObjectStreamClass lookup (Ljava/lang/Class;Z)Ljava/io/ObjectStreamClass; 2345 1 5423 0 -1
+ciMethod java/io/ObjectStreamClass requireInitialized ()V 2121 1 30626 0 0
+ciMethod java/io/ObjectStreamClass checkDefaultSerialize ()V 2081 1 5402 0 0
+ciMethod java/io/ObjectStreamClass getFields (Z)[Ljava/io/ObjectStreamField; 2369 1 5570 0 0
+ciMethod java/io/ObjectStreamClass hasWriteReplaceMethod ()Z 1729 1 5894 0 -1
+ciMethod java/io/ObjectStreamClass invokeWriteReplace (Ljava/lang/Object;)Ljava/lang/Object; 9 1 36 0 -1
+ciMethod java/io/ObjectStreamClass getPrimDataSize ()I 1081 1 135 0 0
+ciMethod java/io/ObjectStreamClass getNumObjFields ()I 1081 1 135 0 0
+ciMethod java/io/ObjectStreamClass getPrimFieldValues (Ljava/lang/Object;[B)V 2137 1 5402 0 0
+ciMethod java/io/ObjectStreamClass getObjFieldValues (Ljava/lang/Object;[Ljava/lang/Object;)V 2217 1 5402 0 0
+ciMethod java/io/ObjectOutputStream replaceObject (Ljava/lang/Object;)Ljava/lang/Object; 0 0 1 0 -1
+ciMethod java/io/ObjectOutputStream writeObject0 (Ljava/lang/Object;Z)V 2305 9 12019 1 -1
+ciMethod java/io/ObjectOutputStream writeNull ()V 201 1 1468 0 -1
+ciMethod java/io/ObjectOutputStream writeHandle (I)V 1777 1 9072 0 -1
+ciMethod java/io/ObjectOutputStream writeClass (Ljava/lang/Class;Z)V 0 0 1 0 -1
+ciMethod java/io/ObjectOutputStream writeClassDesc (Ljava/io/ObjectStreamClass;Z)V 1017 1 4265 0 -1
+ciMethod java/io/ObjectOutputStream writeString (Ljava/lang/String;Z)V 1057 1 3523 0 -1
+ciMethod java/io/ObjectOutputStream writeArray (Ljava/lang/Object;Ljava/io/ObjectStreamClass;Z)V 17 665 49 0 -1
+ciMethod java/io/ObjectOutputStream writeEnum (Ljava/lang/Enum;Ljava/io/ObjectStreamClass;Z)V 0 0 1 0 -1
+ciMethod java/io/ObjectOutputStream writeOrdinaryObject (Ljava/lang/Object;Ljava/io/ObjectStreamClass;Z)V 785 1 3044 1 -1
+ciMethod java/io/ObjectOutputStream defaultWriteFields (Ljava/lang/Object;Ljava/io/ObjectStreamClass;)V 2057 5553 5402 1 -1
+ciMethod java/io/ObjectStreamClass$FieldReflector getPrimFieldValues (Ljava/lang/Object;[B)V 2177 1929 5402 0 0
+ciMethod java/io/ObjectStreamClass$FieldReflector getObjFieldValues (Ljava/lang/Object;[Ljava/lang/Object;)V 2241 6153 5402 0 0
+ciMethod java/io/ObjectStreamClass$ExceptionInfo newInvalidClassException ()Ljava/io/InvalidClassException; 0 0 1 0 -1
+ciMethod java/io/ObjectOutputStream$BlockDataOutputStream setBlockDataMode (Z)Z 2089 1 27857 0 -1
+ciMethod java/io/ObjectOutputStream$BlockDataOutputStream write ([BIIZ)V 2177 1 5407 0 0
+ciMethod java/io/ObjectOutputStream$BlockDataOutputStream drain ()V 1297 1 5349 0 2048
+ciMethod java/io/ObjectOutputStream$BlockDataOutputStream writeBlockHeader (I)V 25 1 537 0 -1
+ciMethod java/io/ObjectOutputStream$HandleTable lookup (Ljava/lang/Object;)I 2057 1785 6218 0 -1
+ciMethod java/io/ObjectOutputStream$ReplaceTable assign (Ljava/lang/Object;Ljava/lang/Object;)V 17 1 43 0 -1
+ciMethod java/io/ObjectOutputStream$ReplaceTable lookup (Ljava/lang/Object;)Ljava/lang/Object; 2497 1 12019 0 -1
+ciMethodData java/io/ObjectStreamClass requireInitialized ()V 2 30626 orig 264 168 227 48 108 0 0 0 0 136 195 116 25 0 0 0 0 80 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 77 68 79 32 101 120 116 114 97 32 100 97 116 97 32 108 111 99 107 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 25 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9 1 0 0 201 180 3 0 1 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 5 0 2 0 0 0 48 0 0 0 255 255 255 255 7 0 4 0 0 0 0 0 data 6 0x40007 0x7699 0x30 0x0 0xd0002 0x0 oops 0
+ciMethod org/gradle/internal/io/StreamByteBuffer allocateSpace ()I 2065 1 4326 0 0
+ciMethod org/gradle/internal/io/StreamByteBuffer addChunk (Lorg/gradle/internal/io/StreamByteBuffer$StreamByteBufferChunk;)V 0 0 23 0 0
+ciMethod org/gradle/internal/io/StreamByteBuffer access$000 (Lorg/gradle/internal/io/StreamByteBuffer;)Lorg/gradle/internal/io/StreamByteBuffer$StreamByteBufferChunk; 1025 1 128 0 0
+ciMethod org/gradle/internal/io/StreamByteBuffer$StreamByteBufferOutputStream write ([BII)V 4017 3921 3625 0 0
+ciMethod org/gradle/internal/io/StreamByteBuffer$StreamByteBufferChunk <init> (I)V 993 1 654 0 0
+ciMethod org/gradle/internal/io/StreamByteBuffer$StreamByteBufferChunk write ([BII)V 3921 1 3562 0 0
+ciMethod org/gradle/internal/io/StreamByteBuffer$StreamByteBufferChunk bytesUnread ()I 2049 1 1658 0 -1
+ciMethod org/gradle/internal/io/StreamByteBuffer$StreamByteBufferChunk spaceLeft ()I 2065 1 4336 0 0
+ciMethodData com/esotericsoftware/kryo/io/Output require (I)Z 2 5900 orig 264 168 227 48 108 0 0 0 0 88 129 33 25 0 0 0 0 152 4 0 0 80 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 77 68 79 32 101 120 116 114 97 32 100 97 116 97 32 108 111 99 107 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 48 1 0 0 225 174 0 0 1 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 1 0 22 0 2 0 0 0 72 3 0 0 255 255 255 255 7 0 10 0 0 0 0 0 data 105 0xa0007 0x24 0x20 0x15b8 0x140007 0x24 0x130 0x0 0x1f0002 0x0 0x240005 0x0 0x0 0x0 0x0 0x0 0x2b0005 0x0 0x0 0x0 0x0 0x0 0x300005 0x0 0x0 0x0 0x0 0x0 0x340005 0x0 0x0 0x0 0x0 0x0 0x370005 0x0 0x0 0x0 0x0 0x0 0x3a0002 0x0 0x3f0005 0x0 0x1b358200 0x24 0x0 0x0 0x4c0007 0x24 0x1c8 0x0 0x570007 0x0 0x130 0x0 0x620002 0x0 0x670005 0x0 0x0 0x0 0x0 0x0 0x730005 0x0 0x0 0x0 0x0 0x0 0x780005 0x0 0x0 0x0 0x0 0x0 0x7c0005 0x0 0x0 0x0 0x0 0x0 0x7f0005 0x0 0x0 0x0 0x0 0x0 0x820002 0x0 0x8a0007 0x0 0x20 0x0 0x9d0002 0x0 0xa70007 0x0 0x20 0x0 0xc40002 0x0 0xcc0003 0x0 0xfffffffffffffe50 oops 1
