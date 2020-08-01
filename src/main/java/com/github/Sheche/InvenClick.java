@@ -24,13 +24,14 @@ public class InvenClick implements Listener {
         if (player.getOpenInventory().getTitle().equals("Noteblock")) {
             event.setCancelled(true);
             NoteBlock noteBlock = (NoteBlock) player.getTargetBlock(null, 4).getBlockData();
+            String instrument = noteBlock.getInstrument().toString();
+
             try {
                 // 1 octave
                 if (item.getItemMeta().getDisplayName().equals(ChatColor.YELLOW + "F#")) {
                     noteBlock.setNote(Note.sharp(0, Note.Tone.F));
                     player.getTargetBlock(null, 4).setBlockData(noteBlock);
-                    String instrument = noteBlock.getInstrument().toString();
-
+                    
                     switch (instrument) {
                         case "BASS_GUITAR":
                             player.playSound(location, Sound.BLOCK_NOTE_BLOCK_BASS, 100, 0.5f);
