@@ -43,6 +43,7 @@ public class CustomInven implements Listener {
         ItemStack item23 = new ItemStack(Material.MUSIC_DISC_PIGSTEP);
         ItemStack item24 = new ItemStack(Material.MUSIC_DISC_11);
         ItemStack nullItem = new ItemStack(Material.LIGHT_GRAY_STAINED_GLASS_PANE);
+        ItemStack tester = new ItemStack(Material.LIGHT_GRAY_STAINED_GLASS_PANE);
 
         //SetMeta
         ItemMeta itemMeta0 = item0.getItemMeta();
@@ -71,6 +72,7 @@ public class CustomInven implements Listener {
         ItemMeta itemMeta23 = item23.getItemMeta();
         ItemMeta itemMeta24 = item24.getItemMeta();
         ItemMeta nullMeta = nullItem.getItemMeta();
+        ItemMeta tMeta = tester.getItemMeta();
 
         //ItemName
         itemMeta0.setDisplayName(ChatColor.YELLOW + "F#");
@@ -99,6 +101,7 @@ public class CustomInven implements Listener {
         itemMeta23.setDisplayName(ChatColor.BLUE + "F");
         itemMeta24.setDisplayName(ChatColor.DARK_BLUE + "F#");
         nullMeta.setDisplayName(ChatColor.WHITE + "blank");
+        tMeta.setDisplayName(ChatColor.WHITE + "LunaXena");
 
         //Apply
         item0.setItemMeta(itemMeta0);
@@ -127,6 +130,7 @@ public class CustomInven implements Listener {
         item23.setItemMeta(itemMeta23);
         item24.setItemMeta(itemMeta24);
         nullItem.setItemMeta(nullMeta);
+        tester.setItemMeta(tMeta);
 
         //Show Items
         inven.setItem(0, item0);
@@ -155,7 +159,7 @@ public class CustomInven implements Listener {
         inven.setItem(23, item23);
         inven.setItem(24, item24);
         inven.setItem(25, nullItem);
-        inven.setItem(26, nullItem);
+        inven.setItem(26, tester);
 
         player.openInventory(inven);
     }
