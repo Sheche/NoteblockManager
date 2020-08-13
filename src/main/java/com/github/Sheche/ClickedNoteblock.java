@@ -9,8 +9,6 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
-import java.util.EnumSet;
-
 public class ClickedNoteblock implements Listener {
 
     @EventHandler
@@ -23,20 +21,34 @@ public class ClickedNoteblock implements Listener {
         ItemStack item = player.getInventory().getItemInMainHand();
 
         if (action.equals(Action.RIGHT_CLICK_BLOCK)) {
-            if (block.getType().equals(Material.NOTE_BLOCK)) {
+            if (block.getType() == Material.NOTE_BLOCK) {
                 if (player.isSneaking()) {
-                    if (item.getType().equals(Material.WOODEN_AXE)) {
-                        i.onInven(player);
-                    } else if (item.getType().equals(Material.STONE_AXE)) {
-                        i.onInven(player);
-                    } else if (item.getType().equals(Material.IRON_AXE)) {
-                        i.onInven(player);
-                    } else if (item.getType().equals(Material.GOLDEN_AXE)) {
-                        i.onInven(player);
-                    } else if (item.getType().equals(Material.DIAMOND_AXE)) {
-                        i.onInven(player);
-                    } else if (item.getType().equals(Material.NETHERITE_AXE)) {
-                        i.onInven(player);
+                    if (item.getType() == Material.WOODEN_AXE) {
+                        i.pitchInven(player);
+                    }
+
+                    else if (item.getType() == Material.STONE_AXE) {
+                        i.pitchInven(player);
+                    }
+
+                    else if (item.getType() == Material.IRON_AXE) {
+                        i.pitchInven(player);
+                    }
+
+                    else if (item.getType() == Material.GOLDEN_AXE) {
+                        i.pitchInven(player);
+                    }
+
+                    else if (item.getType() == Material.DIAMOND_AXE) {
+                        i.pitchInven(player);
+                    }
+
+                    else if (item.getType() == Material.NETHERITE_AXE) {
+                        i.pitchInven(player);
+                    }
+
+                    else if (item.getType() == Material.GOLDEN_SWORD) {
+                        i.insInven(player);
                     }
                 }
             }

@@ -1,5 +1,6 @@
 package com.github.Sheche;
 
+import org.bukkit.Instrument;
 import org.bukkit.block.data.type.NoteBlock;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -8,7 +9,9 @@ import org.bukkit.entity.Player;
 
 public class TestCommand implements CommandExecutor {
 
-    static String cmd = "test";
+    CustomInven customInven = new CustomInven();
+    static String cmd = "get";
+
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
@@ -17,9 +20,7 @@ public class TestCommand implements CommandExecutor {
                 Player player = (Player) sender;
                 NoteBlock noteBlock = (NoteBlock) player.getTargetBlock(null, 4).getBlockData();
 
-                String instrument = noteBlock.getInstrument().name();
-
-                player.sendMessage("This is a " + instrument);
+                player.sendMessage(noteBlock.getInstrument().name());
             }
         }
         return true;

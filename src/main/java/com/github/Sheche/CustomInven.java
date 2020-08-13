@@ -1,8 +1,8 @@
 package com.github.Sheche;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.block.data.type.NoteBlock;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.Inventory;
@@ -11,10 +11,8 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 public class CustomInven implements Listener {
 
-    private NoteblockManager plugin = NoteblockManager.getPlugin(NoteblockManager.class);
-
-    public void onInven(Player player) {
-        Inventory inven = plugin.getServer().createInventory(null, 27, "Noteblock");
+    public void pitchInven(Player player) {
+        Inventory inven = Bukkit.createInventory(null, 27, "Pitch");
 
         //ItemStack
         ItemStack item0 = new ItemStack(Material.MUSIC_DISC_CHIRP);
@@ -42,7 +40,7 @@ public class CustomInven implements Listener {
         ItemStack item22 = new ItemStack(Material.MUSIC_DISC_PIGSTEP);
         ItemStack item23 = new ItemStack(Material.MUSIC_DISC_PIGSTEP);
         ItemStack item24 = new ItemStack(Material.MUSIC_DISC_11);
-        ItemStack nullItem = new ItemStack(Material.LIGHT_GRAY_STAINED_GLASS_PANE);
+        ItemStack nullItem = new ItemStack(Material.BLACK_CONCRETE);
         ItemStack tester = new ItemStack(Material.LIGHT_GRAY_STAINED_GLASS_PANE);
 
         //SetMeta
@@ -100,8 +98,8 @@ public class CustomInven implements Listener {
         itemMeta22.setDisplayName(ChatColor.BLUE + "E");
         itemMeta23.setDisplayName(ChatColor.BLUE + "F");
         itemMeta24.setDisplayName(ChatColor.DARK_BLUE + "F#");
-        nullMeta.setDisplayName(ChatColor.WHITE + "blank");
-        tMeta.setDisplayName(ChatColor.WHITE + "LunaXena");
+        nullMeta.setDisplayName(ChatColor.WHITE + "악기 설정");
+        tMeta.setDisplayName(ChatColor.WHITE + "테스터: LunaXena");
 
         //Apply
         item0.setItemMeta(itemMeta0);
@@ -162,5 +160,106 @@ public class CustomInven implements Listener {
         inven.setItem(26, tester);
 
         player.openInventory(inven);
+    }
+
+    public void insInven(Player player) {
+        Inventory inventory = Bukkit.createInventory(null, 18, "Instrument");
+
+        ItemStack item0 = new ItemStack(Material.OAK_LOG);
+        ItemStack item1 = new ItemStack(Material.SAND);
+        ItemStack item2 = new ItemStack(Material.GLASS);
+        ItemStack item3 = new ItemStack(Material.STONE);
+        ItemStack item4 = new ItemStack(Material.GOLD_BLOCK);
+        ItemStack item5 = new ItemStack(Material.CLAY);
+        ItemStack item6 = new ItemStack(Material.PACKED_ICE);
+        ItemStack item7 = new ItemStack(Material.WHITE_WOOL);
+        ItemStack item8 = new ItemStack(Material.BONE_BLOCK);
+        ItemStack item9 = new ItemStack(Material.IRON_BLOCK);
+        ItemStack item10 = new ItemStack(Material.SOUL_SAND);
+        ItemStack item11 = new ItemStack(Material.PUMPKIN);
+        ItemStack item12 = new ItemStack(Material.EMERALD_BLOCK);
+        ItemStack item13 = new ItemStack(Material.HAY_BLOCK);
+        ItemStack item14 = new ItemStack(Material.GLOWSTONE);
+        ItemStack item15 = new ItemStack(Material.GRASS_BLOCK);
+        ItemStack null1 = new ItemStack(Material.BLACK_CONCRETE);
+        ItemStack tester = new ItemStack(Material.LIGHT_GRAY_STAINED_GLASS_PANE);
+
+        ItemMeta meta0 = item0.getItemMeta();
+        ItemMeta meta1 = item1.getItemMeta();
+        ItemMeta meta2 = item2.getItemMeta();
+        ItemMeta meta3 = item3.getItemMeta();
+        ItemMeta meta4 = item4.getItemMeta();
+        ItemMeta meta5 = item5.getItemMeta();
+        ItemMeta meta6 = item6.getItemMeta();
+        ItemMeta meta7 = item7.getItemMeta();
+        ItemMeta meta8 = item8.getItemMeta();
+        ItemMeta meta9 = item9.getItemMeta();
+        ItemMeta meta10 = item10.getItemMeta();
+        ItemMeta meta11 = item11.getItemMeta();
+        ItemMeta meta12 = item12.getItemMeta();
+        ItemMeta meta13 = item13.getItemMeta();
+        ItemMeta meta14 = item14.getItemMeta();
+        ItemMeta meta15 = item15.getItemMeta();
+        ItemMeta metaN1 = null1.getItemMeta();
+        ItemMeta testerMeta = tester.getItemMeta();
+
+        meta0.setDisplayName(ChatColor.WHITE + "더블 베이스");
+        meta1.setDisplayName(ChatColor.WHITE + "작은 북");
+        meta2.setDisplayName(ChatColor.WHITE + "클릭 스틱");
+        meta3.setDisplayName(ChatColor.WHITE + "베이스 드럼");
+        meta4.setDisplayName(ChatColor.WHITE + "종");
+        meta5.setDisplayName(ChatColor.WHITE + "플루트");
+        meta6.setDisplayName(ChatColor.WHITE + "차임벨");
+        meta7.setDisplayName(ChatColor.WHITE + "기타");
+        meta8.setDisplayName(ChatColor.WHITE + "실로폰");
+        meta9.setDisplayName(ChatColor.WHITE + "철 실로폰");
+        meta10.setDisplayName(ChatColor.WHITE + "카우벨");
+        meta11.setDisplayName(ChatColor.WHITE + "디저리두");
+        meta12.setDisplayName(ChatColor.WHITE + "비트");
+        meta13.setDisplayName(ChatColor.WHITE + "벤조");
+        meta14.setDisplayName(ChatColor.WHITE + "강한 하프");
+        meta15.setDisplayName(ChatColor.WHITE + "하프 / 피아노");
+        metaN1.setDisplayName(ChatColor.WHITE + "음 설정");
+        testerMeta.setDisplayName(ChatColor.WHITE + "테스터: LunaXena");
+
+        item0.setItemMeta(meta0);
+        item1.setItemMeta(meta1);
+        item2.setItemMeta(meta2);
+        item3.setItemMeta(meta3);
+        item4.setItemMeta(meta4);
+        item5.setItemMeta(meta5);
+        item6.setItemMeta(meta6);
+        item7.setItemMeta(meta7);
+        item8.setItemMeta(meta8);
+        item9.setItemMeta(meta9);
+        item10.setItemMeta(meta10);
+        item11.setItemMeta(meta11);
+        item12.setItemMeta(meta12);
+        item13.setItemMeta(meta13);
+        item14.setItemMeta(meta14);
+        item15.setItemMeta(meta15);
+        null1.setItemMeta(metaN1);
+        tester.setItemMeta(testerMeta);
+
+        inventory.setItem(0, item0);
+        inventory.setItem(1, item1);
+        inventory.setItem(2, item2);
+        inventory.setItem(3, item3);
+        inventory.setItem(4, item4);
+        inventory.setItem(5, item5);
+        inventory.setItem(6, item6);
+        inventory.setItem(7, item7);
+        inventory.setItem(8, item8);
+        inventory.setItem(9, item9);
+        inventory.setItem(10, item10);
+        inventory.setItem(11, item11);
+        inventory.setItem(12, item12);
+        inventory.setItem(13, item13);
+        inventory.setItem(14, item14);
+        inventory.setItem(15, item15);
+        inventory.setItem(16, null1);
+        inventory.setItem(17, tester);
+
+        player.openInventory(inventory);
     }
 }
