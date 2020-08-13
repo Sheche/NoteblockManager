@@ -7,7 +7,6 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.inventory.ItemStack;
 
 public class ClickedNoteblock implements Listener {
 
@@ -18,38 +17,13 @@ public class ClickedNoteblock implements Listener {
         Block block = event.getClickedBlock();
         CustomInven i = new CustomInven();
 
-        ItemStack item = player.getInventory().getItemInMainHand();
+        Material item = player.getInventory().getItemInMainHand().getType();
 
         if (action.equals(Action.RIGHT_CLICK_BLOCK)) {
-            if (block.getType() == Material.NOTE_BLOCK) {
+            if (block != null && block.getType() == Material.NOTE_BLOCK) {
                 if (player.isSneaking()) {
-                    if (item.getType() == Material.WOODEN_AXE) {
+                    if (item == Material.WOODEN_AXE || item == Material.STONE_AXE || item == Material.IRON_AXE || item == Material.GOLDEN_AXE || item == Material.DIAMOND_AXE || item == Material.NETHERITE_AXE)
                         i.pitchInven(player);
-                    }
-
-                    else if (item.getType() == Material.STONE_AXE) {
-                        i.pitchInven(player);
-                    }
-
-                    else if (item.getType() == Material.IRON_AXE) {
-                        i.pitchInven(player);
-                    }
-
-                    else if (item.getType() == Material.GOLDEN_AXE) {
-                        i.pitchInven(player);
-                    }
-
-                    else if (item.getType() == Material.DIAMOND_AXE) {
-                        i.pitchInven(player);
-                    }
-
-                    else if (item.getType() == Material.NETHERITE_AXE) {
-                        i.pitchInven(player);
-                    }
-
-                    else if (item.getType() == Material.GOLDEN_SWORD) {
-                        i.insInven(player);
-                    }
                 }
             }
         }
