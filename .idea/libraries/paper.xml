@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="paper">
     <CLASSES>
-      <root url="jar://E:/서버 버킷/플러그인 테스트/paper.jar!/" />
+      <root url="jar://E:/@서버 버킷/테스트/paper.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

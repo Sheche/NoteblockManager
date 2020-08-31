@@ -3,7 +3,6 @@ plugins {
 }
 
 group 'com.github.Sheche'
-version '1.0-SNAPSHOT'
 
 repositories {
     maven {
