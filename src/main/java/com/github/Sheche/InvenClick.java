@@ -160,7 +160,7 @@ public class InvenClick implements Listener {
                 NoteBlock noteBlock = (NoteBlock) player.getTargetBlock(null, 5).getBlockData();
             }
             catch (ClassCastException e) {
-                player.sendMessage(ChatColor.RED + "Look at the noteblock.");
+                player.sendMessage(ChatColor.RED + "Look at the Noteblock.");
                 return;
             }
             Block targetBlock = player.getTargetBlock(null, 5);
