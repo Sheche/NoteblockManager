@@ -7,6 +7,9 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.inventory.ItemStack;
+
+import java.util.EnumSet;
 
 public class ClickedNoteblock implements Listener {
 
@@ -16,14 +19,14 @@ public class ClickedNoteblock implements Listener {
         Player player = event.getPlayer();
         Block block = event.getClickedBlock();
         CustomInven i = new CustomInven();
+        EnumSet<Material> axes = EnumSet.of(Material.WOODEN_AXE, Material.STONE_AXE, Material.IRON_AXE, Material.GOLDEN_AXE, Material.DIAMOND_AXE, Material.NETHERITE_AXE);
 
-        Material item = player.getInventory().getItemInMainHand().getType();
+        ItemStack item = player.getInventory().getItemInMainHand();
 
         if (action.equals(Action.RIGHT_CLICK_BLOCK)) {
             if (block != null && block.getType() == Material.NOTE_BLOCK) {
-                if (player.isSneaking()) {
-                    if (item == Material.WOODEN_AXE || item == Material.STONE_AXE || item == Material.IRON_AXE || item == Material.GOLDEN_AXE || item == Material.DIAMOND_AXE || item == Material.NETHERITE_AXE)
-                        i.pitchInven(player);
+                if (player.isSneaking() && item != null && axes.contains(item.getType())) {
+                    i.pitchInven(player);
                 }
             }
         }
